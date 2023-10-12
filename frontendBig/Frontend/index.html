@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Khavee</title>
+        <link rel="icon" href="images/browser_logo.png" type="image/png">
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+        <!-- <base href="https://Khavee.com"> -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body id="section1">
+        <nav id="navbar">
+            <div class="header-main">
+                <div class="header-main-logo">
+                    <img id="logo" src="images/main_logo_before.png" alt="imagon logo">
+                </div>
+                <div class="header-main-nav">
+                    <ul class="nav">
+                        <li id="ipad-del-nav1"><a href="#section1" class="PK ipad-del">หน้าแรก</a></li>
+                        <li id="mb-del-nav1"><a href="#section2" class="PK mb-del">ตรวจฉันทลักษณ์กลอน</a></li>
+                        <li id="ipad-del-nav1"><a href="#section3" class="PK ipad-del">เรียนรู้</a></li>
+                        <li id="mb-del-nav1"><a href="#section4" class="PK mb-del">ติดต่อเรา</a></li>
+                        <li class="mk_profile"><a id="profile"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                            <path class="profile" d="M7.2548 25.222C10.1329 23.5951 13.458 22.6667 17 22.6667C20.542 22.6667 23.8671 23.5951 26.7452 25.222M21.25 14.1667C21.25 16.5139 19.3472 18.4167 17 18.4167C14.6528 18.4167 12.75 16.5139 12.75 14.1667C12.75 11.8195 14.6528 9.91667 17 9.91667C19.3472 9.91667 21.25 11.8195 21.25 14.1667ZM29.75 17C29.75 24.0416 24.0416 29.75 17 29.75C9.95837 29.75 4.25 24.0416 4.25 17C4.25 9.95837 9.95837 4.25 17 4.25C24.0416 4.25 29.75 9.95837 29.75 17Z" stroke="#F9F9F9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg></a></li>
+                    </ul>
+                    <div class="card hidden" id="card">
+                        <svg class="kem" xmlns="http://www.w3.org/2000/svg" width="17" height="9" viewBox="0 0 17 9" fill="none">
+                            <path d="M7.87082 0.53534C8.24196 0.225385 8.7817 0.225386 9.15284 0.535341L16.4707 6.64685C17.1881 7.24604 16.7644 8.41438 15.8297 8.41438H1.194C0.259237 8.41438 -0.164468 7.24604 0.552994 6.64685L7.87082 0.53534Z" fill="#133353"/>
+                            </svg>
+                        <ul>
+                            <li class="a" class="ibm"><img src="images/profile.png"><h1 id="usernameCard"></h1></li>
+                            <li class="b" class="ibm"><a id="history">ประวัติการโพสต์</a></li>
+                            <li class="c" class="ibm"><a href="" id="logout">ออกจากระบบ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="Home">
+            <div class="his-page hidden" id="history-page">
+                <button id="exit3" class="close2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M6 18L18 6M6 6L18 18" stroke="#A0B3C1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></button>
+                <h1 class="ibm">ประวัติการโพสต์</h1>
+                <div class="zin">
+                    <div>
+                        <ul class="ibm" id="his_poem">
+                            <!-- <li>
+                                <div class="text">
+                                    ถึงโรงเหล้าเตากลั่นควันขโมง มีค้นโพงผูกสายไว้ปลายเสา 
+                                    โอ้บาปกรรมน้ำcewfvrg34httgerfvนรกเจียวอกเรา ให้มัวเมาเหมือนหนึ่งบ้าเป็นน่าอาย 
+                                    ทำบุญบวชกรวดน้ำขอสำเร็จ สรรเพชญโพธิญาณประมาณหมาย 
+                                    ถึงสุราพารอดไม่วอดวาย ไม่ใกล้กรายแกล้งเมินก็เกินไป
+                                </div>
+                                <div class="delete">
+                                    <svg class="delete-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path class="delete-model" d="M19 7L18.1327 19.1425C18.0579 20.1891 17.187 21 16.1378 21H7.86224C6.81296 21 5.94208 20.1891 5.86732 19.1425L5 7M10 11V17M14 11V17M15 7V4C15 3.44772 14.5523 3 14 3H10C9.44772 3 9 3.44772 9 4V7M4 7H20" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                </div>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="select" class="">
+                <button class="unselect" id="regis" class="ibm">สร้างบัญชี</button><button class="selected" id="log" class="ibm">เข้าสู่ระบบ</button>
+            </div>
+            <div id="register" class="">
+                <button id="exit1" class="close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M6 18L18 6M6 6L18 18" stroke="#A0B3C1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></button>
+                <h4 class="ibm">เข้าร่วม Khavee</h4>
+                <h2 style="text-align: center;" id="signup-error"></h2>
+                <ul>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 9C11.6569 9 13 7.65685 13 6C13 4.34315 11.6569 3 10 3C8.34315 3 7 4.34315 7 6C7 7.65685 8.34315 9 10 9Z" fill="#2F5D8C"/>
+                            <path d="M3 18C3 14.134 6.13401 11 10 11C13.866 11 17 14.134 17 18H3Z" fill="#2F5D8C"/>
+                        </svg>
+                        <input class="PK" type="text" name="username" placeholder="ชื่อผู้ใช้" id="signup_username" autocomplete="off" required>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                            <path d="M1.70278 5.00102L8.49991 8.39958L15.2971 5.00098C15.2458 4.10818 14.5056 3.4 13.6 3.4H3.39995C2.49429 3.4 1.75404 4.1082 1.70278 5.00102Z" fill="#2F5D8C"/>
+                            <path d="M15.3 6.90022L8.49991 10.3002L1.69995 6.90026V11.9C1.69995 12.8389 2.46107 13.6 3.39995 13.6H13.6C14.5388 13.6 15.3 12.8389 15.3 11.9V6.90022Z" fill="#2F5D8C"/>
+                        </svg>
+                        <input class="PK" type="email" name="gmail" placeholder="อีเมล" id="signup_email" autocomplete="off" required>
+                    </li>
+                    <li>
+                        <img src="images/password.png">
+                    <input class="PK" type="password" name="password" placeholder="รหัสผ่าน" id="signup_password" autocomplete="off" required>
+                    </li>
+                </ul>
+                <button class="regis-btn" onclick="signup()">เข้าสู่ระบบ ></button>
+            </div>
+            <div id="login" class="">
+                <button id="exit2" class="close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M6 18L18 6M6 6L18 18" stroke="#A0B3C1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></button>
+                <h4 class="ibm">ยินดีต้อนรับ</h4>
+                <h2 style="text-align: center;" id="login-error"></h2>
+                <ul>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                            <path d="M1.70278 5.00102L8.49991 8.39958L15.2971 5.00098C15.2458 4.10818 14.5056 3.4 13.6 3.4H3.39995C2.49429 3.4 1.75404 4.1082 1.70278 5.00102Z" fill="#2F5D8C"/>
+                            <path d="M15.3 6.90022L8.49991 10.3002L1.69995 6.90026V11.9C1.69995 12.8389 2.46107 13.6 3.39995 13.6H13.6C14.5388 13.6 15.3 12.8389 15.3 11.9V6.90022Z" fill="#2F5D8C"/>
+                        </svg>
+                        <input class="PK" type="text" name="gmail" id="login_name" placeholder="อีเมลหรือชื่อผู้ใช้" autocomplete="off" required>
+                    </li>
+                    <li>
+                        <img src="images/password.png">
+                    <input class="PK" type="password" name="password" id="login_pass" placeholder="รหัสผ่าน" autocomplete="off" required>
+                    </li>
+                </ul>
+                <button class="regis-btn" onclick="signin()">เข้าสู่ระบบ ></button>
+            </div>
+            <!-- <h1 id="wellc" style="text-align: center; padding-top: 300px; font-size: 70px; color: aliceblue; display: none;">Wellcome Tanakrit Saiphan</h1> -->
+            <a class="login-but" href="#" id="login-click">
+                <img src="images/login_pic.png" alt="login_pic" class="mk_door">
+                <div class="login-trigger">
+                    <p class="ibm">กดกริ่งเพื่อเข้าสู่ระบบ</p>
+                </div>
+            </a>
+            
+        </div>
+        <div class="info">
+            <h1 class="ibm">กวีคืออะไร ?</h1>
+            <h2 class="ibm">เว็บไซต์กวีของเราถูกจัดทำขึ้นมาเพื่อส่งเสริมการศึกษาโดยฟังก์ชันที่เราจัดทำขึ้นสามารถ<br />อำนวยความสะดวกให้ผู้ใช้งานไม่ว่าจะเป็นการตรวจฉันทลักษณ์กลอนการเรียนรู้วิธีการ<br />แต่งกลอนรวมถึงการร่วมแชร์ผลงานที่เขียนขึ้น และสำรวจผลงานของผู้ที่เคยโพสต์ </h2>
+            <div>
+                <ul class=list1>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="98" height="98" viewBox="0 0 98 98" fill="none">
+                        <path d="M49 4C24.1472 4 4 24.1472 4 49C4 73.8526 24.1472 94 49 94C73.8526 94 94 73.8526 94 49C94 24.1472 73.8526 4 49 4Z" stroke="#2F5D8C" stroke-width="6.85093" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14.2197 77.5556C14.2197 77.5556 24.2503 64.75 49.0002 64.75C73.7502 64.75 83.7812 77.5556 83.7812 77.5556" stroke="#2F5D8C" stroke-width="6.85093" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M49 49C56.4561 49 62.5 42.9561 62.5 35.5C62.5 28.0442 56.4561 22 49 22C41.544 22 35.5 28.0442 35.5 35.5C35.5 42.9561 41.544 49 49 49Z" stroke="#2F5D8C" stroke-width="6.85093" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg><p class="ibm">ผู้ใช้สามารถสร้างยูเซอร์เนมเพื่อ<br />ร่วมแชร์ผลงาน ปรับปรุงแก้ไข <br />รวมถึงลบผลงานที่เคยโพสต์ <br />โดยการเข้าไปที่หน้าโปรไฟล์ <br />ของผู้ใช้</p></li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="99" height="99" viewBox="0 0 99 99" fill="none">
+                        <path d="M26.75 51.775L40.4 65.425L72.25 33.575" stroke="#12A812" stroke-width="7.29671" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M49.5 95C74.6287 95 95 74.6287 95 49.5C95 24.371 74.6287 4 49.5 4C24.371 4 4 24.371 4 49.5C4 74.6287 24.371 95 49.5 95Z" stroke="#12A812" stroke-width="7.29671" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg><p class="ibm">ผู้ใช้สามารถเช็คความถูกผิดของ<br />ฉันทลักษณ์ โดยจะมีการระบุให้<br />ว่ากลอนที่เขียนขึ้นนั้นตรงตาม <br />ฉันทลักษณ์หรือไม่</p></li>
+                </ul>
+                <ul class="list2">
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="120" height="113" viewBox="0 0 120 113" fill="none">
+                        <path d="M35 98.5878H85C90.5228 98.5878 95 94.3841 95 89.1985V44.1965C95 42.9514 94.4732 41.7573 93.5355 40.8769L66.4645 15.459C65.5268 14.5786 64.255 14.084 62.9289 14.084H35C29.4772 14.084 25 18.2877 25 23.4733V89.1985C25 94.3841 29.4772 98.5878 35 98.5878Z" stroke="#F5C265" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg><p class="ibm">เรียนรู้วิธีการแต่งกลอนให้ตรง <br />ตามฉันทลักษณ์ โดยเรียนรู้ <br />จากเอกสารที่เรารวบรวมมาให้ <br />และจัดทำให้อยู่ในรูปลักษณ์ที่ <br />เข้าใจได้ง่าย และมีตัวอย่าง <br />ประกอบ</p></li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none">
+                        <path d="M40 80L54.3934 65.6066M54.3934 65.6066C57.1079 68.3211 60.8579 70 65 70C73.2843 70 80 63.2843 80 55C80 46.7157 73.2843 40 65 40C56.7157 40 50 46.7157 50 55C50 59.1421 51.6789 62.8921 54.3934 65.6066ZM105 60C105 84.8528 84.8528 105 60 105C35.1472 105 15 84.8528 15 60C15 35.1472 35.1472 15 60 15C84.8528 15 105 35.1472 105 60Z" stroke="#CD5242" stroke-width="7" stroke-linecap="round"/>
+                        </svg><p class="ibm">สำรวจบทกลอนที่เคยถูกโพสต์ <br />โดยเลือกดูทั้งหมดได้ หรือเลือก <br />ดูตามคีย์เวิร์ด</p></li>
+                </ul>
+            </div>
+        </div>
+        <div class="check" id="headtextID">
+            <div class="Submit" id="section2">
+                <div class="headtext" >
+                    <h1 class="ibm">ตรวจฉันทลักษณ์</h1>
+                </div>
+                <div class="mk_poem">
+                    <h2 id="show_poem">
+                    </h1>
+                </div>
+
+
+                <div class="input">
+                    <div class="formm">
+                    <div class="button" >
+                        <h2 class="" id="k4" class="ibm"><button id="m4" onclick="addclass1()">กลอน ๘</button></h2>
+                        <!-- <h2 class="" id="k8" class="th"><button id="m8" onclick="addclass2()">กลอน ๘</button></h2> -->
+                    </div>
+                    </div class="formm">
+                    <div class="formm">
+                        <textarea class="ibm" name="ta" id="kon" placeholder="กลอนที่ต้องการตรวจ" cols="30" rows="10"></textarea>
+                        <h2 class="chk" class="PK"><button onclick="logPoem()">ตรวจ</button></h2>
+                        <h2 class="post" class="PK"><button onclick="postData()">โพสต์</button></h2>
+                    </div class="formm">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="posted">
+            <div class="allposted hidden" id="allpostpage">
+                <button id="exit4" class="close2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M6 18L18 6M6 6L18 18" stroke="#A0B3C1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></button>
+                <h1 class="ibm">บทกลอนทั้งหมด</h1>
+                <div>
+                    <div class="search-bar">
+                        <input class="PK" id="searchAll" type="text" placeholder="ค้นหาชื่อผู้แต่งหรือบทกลอน">
+                        <button onclick="search_all()"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path d="M21.5 21.5L28 28" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 13.1429C2 19.2969 6.98882 24.2857 13.1429 24.2857C16.2252 24.2857 19.0153 23.0342 21.0326 21.0116C23.0429 18.996 24.2857 16.2146 24.2857 13.1429C24.2857 6.98882 19.2969 2 13.1429 2C6.98882 2 2 6.98882 2 13.1429Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg></button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <select name="choice" id="">
+                        <option class="ibm" value="กลอน4">กลอน ๘</option>
+                        <option class="ibm" value="ทั้งหมด">ทั้งหมด</option>
+                    </select>
+                    <div class="icon-container">
+                        <img src="images/custom-arrow.png">
+                    </div>
+                </div>
+                <div class="listiny">
+                    <ul class="ibm" id="all_list_ul">
+                    </ul>
+                </div>
+            </div>
+            <div class="search-bar">
+                <input class="PK" id="searchSample" type="text" placeholder="ค้นหาชื่อผู้แต่งหรือบทกลอน">
+                <button onclick="search_sample()"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                    <path d="M21.5 21.5L28 28" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 13.1429C2 19.2969 6.98882 24.2857 13.1429 24.2857C16.2252 24.2857 19.0153 23.0342 21.0326 21.0116C23.0429 18.996 24.2857 16.2146 24.2857 13.1429C24.2857 6.98882 19.2969 2 13.1429 2C6.98882 2 2 6.98882 2 13.1429Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></button>
+            </div>
+            <div class="dropdown">
+                <select name="choice" id="">
+                    <option class="ibm" value="กลอน8">กลอน ๘</option>
+                    <option class="ibm" value="ทั้งหมด">ทั้งหมด</option>
+                </select>
+                <div class="icon-container">
+                    <img src="images/custom-arrow.png">
+                </div>
+            </div>
+            <div class="listshow">
+                <ul class="ibm" id="all_poem_ul">
+                </ul>
+            </div>
+            <div class="watchall">
+                <a id="seeall"><svg class="watch" xmlns="http://www.w3.org/2000/svg" width="73" height="73" viewBox="0 0 73 73" fill="none">
+                    <path d="M26.0869 19.1609L46.8654 36.4763L26.0869 53.7916" stroke="#2F5D8C" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M36.4764 69.9528C54.9647 69.9528 69.9528 54.9647 69.9528 36.4764C69.9528 17.9879 54.9647 3 36.4764 3C17.9879 3 3 17.9879 3 36.4764C3 54.9647 17.9879 69.9528 36.4764 69.9528Z" stroke="#2F5D8C" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></a>
+                <p class="PK">ดูทั้งหมด</p>
+            </div>
+        </div>
+        <div class="learn" id="section3" class="thB">
+            <h1 class="k4head" class="ibm" >กลอน ๘</h1>
+            <div class="mkm">
+                <h2 class="panpung PK" >แผนผัง</h2>
+                <img src="images/kon4.png" class="k4pic">
+            </div>
+            <div class="mkm">
+                <h2 class="tuayang PK   ">ตัวอย่าง</h2>
+                <img src="images/k4.png" class="im">
+            </div>
+
+            <div class="bk"></div>
+        </div>
+        <div class="end" id="section4">
+            <div class="credit">
+                <ul class="main">
+                    <li class="submain">
+                        <h1>สารบัญ</h1>
+                        <ul class="sub">
+                            <li>หน้าแรก</li>
+                            <li>ตรวจฉันทลักษณ์กลอน</li>
+                            <li>เรียนรู้</li>
+                            <li>ติดต่อเรา</li>
+                        </ul>
+                    </li>
+                    <li class="submain">
+                        <h1>กลุ่มที่ 54</h1>
+                        <ul class="sub">
+                            <li>กษิดิ์เดช เกรียงวงศ์</li>
+                            <li>ธนกฤษ สายพันธ์</li>
+                            <li>ธนกฤต เทพนอก</li>
+                            <li>ณวกรณ์ จำรูญ</li>
+                            <li>ณรงค์วุฒิ บุณยรัตพันธ</li>
+                            <li>ชนาณัติ หัสรังค์</li>
+                        </ul>
+                    </li>
+                    <li class="submain" id="last">
+                        <h1>ติดตามเราที่</h1>
+                        <img class="sub" src="images/Discord.png" >
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script src="poem.js"></script>
+        <script src="style.js"></script>
+        <script src="script.js"></script>
+        <script>
+            window.onload = fetch_all;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,1178 @@
+@font-face {
+    font-family: 'IBM Plex Sans Thai Looped';
+    src: url('fonts/IBMPlexSansThaiLooped-Medium.ttf') format('woff2');
+    /* Add more font formats if necessary */
+}
+@font-face{
+    font-family: 'PK';
+    src: url("fonts/PK_Maehongson_Medium.ttf") format("woff2");
+}
+.ibm{
+    font-family: 'IBM Plex Sans Thai Looped';
+}
+.PK{
+    font-family: 'PK';
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* แถบเมนูบาร์ */
+nav{
+    position: fixed;
+    /* top: 0;
+    left: 0; */
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+}
+.zin{
+    z-index: 1;
+}
+.header-main{
+    width: 100%;
+    height: 100px;
+    background: rgba(255, 255, 255, 0);
+    display: flex;
+    justify-content: space-around;
+}
+.header-main-logo{
+    /* margin-left: 100px;
+    margin-right: 138.5px; */
+    display: flex;
+}
+.header-main-logo img{
+    width: 162px;
+    align-self: center;
+}
+.header-main-nav{
+    width: fit-content;
+    height: 100%;
+}
+.header-main-nav ul.nav{
+    display: flex;
+    list-style: none;
+    padding-top: 30px;
+}
+.header-main-nav ul.nav li a{
+    font-size: 32px;
+    z-index: 15;
+    white-space: nowrap;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    cursor: pointer;
+}
+.header-main-nav ul.nav li a:hover::after{
+    width: 100%;
+}
+.header-main-nav ul.nav li a:active{
+    color: #2F5D8C;
+}
+.header-main-nav ul.nav li a::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #2F5D8C;
+    transition: width 0.3s ease-in-out;
+}
+.header-main-nav ul.nav li{
+    padding-left: 100px;
+    display: inline;
+}
+#profile:hover .profile{
+    stroke: #2F5D8C;
+}
+nav.scroll .profile{
+    stroke: black;
+}
+nav.scroll{
+    background-color: rgb(255, 255, 255);  
+}
+nav.scroll .header-main{
+    box-shadow: 0px 0px 10px gray;
+}
+nav.scroll .header-main-nav ul.nav li a{
+    color: rgb(0, 0, 0);
+}
+/*profile*/
+.kem{
+    position: absolute;
+    margin-top: 0px;
+    right: 8.3rem;
+}
+.card ul{
+    display: flex;
+    list-style: none;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 264px;
+    height: 160px;
+    background: #133353;
+    position: absolute;
+    top: 5rem;
+    right:3rem;
+    border-radius: 13px;
+  }
+.card ul li{
+    color: #FFF;
+    width: 264px;
+    height: 40px;
+}
+.card ul li {
+    list-style-type: none;
+    display: flex; /* Display list items horizontally */
+}
+
+.card ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Set link color to white */
+}
+.card ul li.b{
+    margin-top: 30px;
+}
+.card ul li a#history,.card ul li a#logout{
+    cursor: pointer;
+    padding-top: 5px;
+    padding-left: 20px;
+}
+#history:hover{
+    width: 264px;
+    background-color: #FFF;
+    color: #133353;
+}
+#logout:hover{
+    width: 264px;
+    background-color: #FFF;
+    color: #133353;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+
+}
+.card ul li.a{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    padding-left: 15px;
+}
+li.a img, li.a h1 {
+    display: inline;
+}
+li.a h1{
+    margin-left: 20px;
+}
+.hidden{
+    display: none;
+}
+/*history*/
+.his-page{
+    position: fixed;
+    width: 700px;
+    height: 80vh;
+    left: 50%;
+    margin-left: -350px; /* Negative half of width. */
+    margin-top: 140px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 5px 5px 19px 0px rgba(0, 0, 0, 0.25);
+    overflow: auto;
+    z-index: 200;
+}
+.his-page button.close2{
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    top: 16px;
+    right: 17px;
+    background: none;
+    border: 0px;
+    cursor: pointer;
+}
+.his-page h1{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: normal;
+    cursor: default;
+}
+.his-page ul{
+    margin-top: 30px;
+    list-style: none;
+}
+.his-page li{
+    background: #fff;
+    position: relative;
+    width: 550px;
+    border-radius: 10px;
+    border: 4px solid #2F5D8C;
+    box-shadow: 0px -2px 23px -6px rgba(0, 0, 0, 0.25);
+    padding:10px;
+    margin: 20px 70px;
+    cursor: default;
+}
+.text{
+    width: 390px;
+}
+.delete{
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    cursor: pointer;
+}
+.delete:hover .delete-icon .delete-model {
+    stroke: #FF0000; /* Change to the desired color when hovering */
+}
+/* หน้าHome */
+.Home{
+    width: 100%;
+    height: 100vh;
+    /* position: static; */
+    background-image: url(images/background1.jpg);
+    background-position: center;
+    background-size:cover;
+}
+.Door{
+    height: 80px;
+    width: 80px;
+    /* display: flex;
+    justify-content: center;
+    margin-top: 440px; */
+}
+#select{
+    position: absolute;
+    margin-top: 250px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 11px;
+    background: #A0B3C1;
+    width: 296px;
+    height: 59px;
+    /* flex-shrink: 0; */
+    display: none;
+}
+#select button{
+    font-size: 22px;
+    color: #fff;
+    background: none;
+    border: 0px;
+    cursor: pointer;
+}
+#select button.unselect{
+    margin: 0px 26.5px;
+}
+#select button.selected{
+    height: 100%;
+    width: 50.8%;
+    border-radius: 11px;
+    border: 2px solid #2F5D8C;
+    background: #FFF;
+    color: #2F5D8C;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+/*register*/
+#register{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 346px;
+    width: 600px;
+    height: 470px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 19px 0px rgba(0, 0, 0, 0.25);
+    background: #fff;
+    display: none;
+}
+#register h4{
+    padding: 40px 30px;
+    color: #2F5D8C;
+    text-align: center;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    cursor: default;
+}
+#register ul{
+    list-style: none;
+    margin: 0px 60px;
+}
+#register ul li{
+    padding: 25px;
+}
+#register ul li svg,#register ul li img{
+    position: absolute;
+    
+}
+#register ul li input{
+    width: 90%;
+    font-size: 20px;
+    padding: 3px 30px;
+    border: 0px;
+    border-bottom: 2px solid #2e2d2d;
+}
+#register button.close{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 16px;
+    right: 17px;
+    background: none;
+    border: 0px;
+    cursor: pointer;
+}
+#register button.regis-btn{
+    font-family: 'PK';
+    margin: 25px 230px;
+    width: 140px;
+    height: 42px;
+    font-size: 20px;
+    border-radius: 20px;
+    background: #2F5D8C;
+    box-shadow: 4px 4px 17px 0px rgba(0, 0, 0, 0.25);
+    border: 0px;
+    color: #FFF;
+    cursor: pointer;
+}
+.activate{
+    display: block;
+}
+/*login page*/
+#login{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 346px;
+    width: 600px;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 19px 0px rgba(0, 0, 0, 0.25);
+    background: #fff;
+    display: none;
+}
+#login h4{
+    padding: 40px 30px;
+    color: #2F5D8C;
+    text-align: center;
+    font-family: IBM Plex Sans Thai Looped;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    cursor: default;
+}
+#login ul{
+    list-style: none;
+    margin: 0px 60px;
+}
+#login ul li{
+    padding: 25px;
+}
+#login ul li svg,#login ul li img{
+    position: absolute;
+    
+}
+#login ul li input{
+    width: 90%;
+    font-size: 20px;
+    padding: 3px 30px;
+    border: 0px;
+    border-bottom: 2px solid #2e2d2d;
+}
+#login button.close{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 16px;
+    right: 17px;
+    background: none;
+    border: 0px;
+    cursor: pointer;
+}
+#login button.regis-btn{
+    font-family: 'PK';
+    margin: 25px 230px;
+    width: 140px;
+    height: 42px;
+    font-size: 20px;
+    border-radius: 20px;
+    background: #2F5D8C;
+    box-shadow: 4px 4px 17px 0px rgba(0, 0, 0, 0.25);
+    border: 0px;
+    color: #FFF;
+    cursor: pointer;
+}
+/*bell ring*/
+.login-trigger{
+    position: static;
+    height: 75px;
+    width: 240px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: 10px;
+    margin-left: 740px; */
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    white-space: nowrap;
+    text-decoration: none;
+}
+.login-trigger p{
+    color: #f8f8f8;
+    padding: 20px 10px;
+    font-size: 23px;
+}
+.login-but {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* margin-top: 500px; */
+    text-decoration: none; /* Remove underline from the entire anchor element */
+}
+.mk_door{
+    width: 90px;
+    margin-top: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.login-trigger p {
+    text-decoration: none; /* Remove underline from the <p> element */
+}
+/*info page*/
+.info{
+    width: 100%;
+    height: 130vh;
+    padding: 100px 0;
+    cursor: default;
+}
+.info h1{
+    color: #000;
+    text-align: center;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.info h2{
+    margin-top: 40px;
+    color: #000;
+    text-align: center;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.list1 {
+    margin-top: 70px;
+    list-style-type: none;
+    display: flex;
+    /* margin-left: 300px; */
+    /* margin-top: 70px; */
+    justify-content: space-around;
+}
+
+.list1 li {
+    display: flex;
+    align-items: center;
+}
+.list1 li p{
+    margin-left: 50px;
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.list2 {
+    list-style-type: none;
+    display: flex;
+    /* margin-left: 300px; */
+    margin-top: 70px;
+    justify-content: space-around;
+}
+
+.list2 li {
+    display: flex;
+    align-items: center;
+}
+.list2 li p{
+    margin-left: 35px;
+    color: #000;
+    font-size:24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+/* หน้าCheck */
+.check{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: static;
+    padding-bottom: 800px;
+    background-color: #A0B3C1;
+    background-position: center;
+    background-size: cover;
+}
+.button button{
+    border-radius: 22px;
+    padding: 5px 10px;
+    border: 0px solid #838383;
+    background: white;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    margin: 10px;
+}
+.button button:hover{
+    backdrop-filter: blur(5px);
+}
+.button{
+    background-color: #ffffff;
+    height: 50px;
+    width: 100%;
+    margin-top: 50px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0px 0px 10px gray;
+
+}
+.button button{
+    position: static;
+}
+#m4{
+    text-align: left;
+    padding-left: 20px;
+    font-size: 17px;
+    margin-left: 45px;
+}
+/* #m8{
+    text-align: left;
+    padding-left: 20px;
+    font-size: 17px;
+    margin-left: 125px;
+} */
+.on button{
+    background: #F5C265;
+}
+.formm{
+    display: flex;
+    justify-content: center;
+}
+textarea::placeholder {
+    color: #E3E3E3;
+}
+textarea{
+    width: 100%;
+    height: 500px;
+    padding: 40px 80px;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    resize: none;
+    background-image: url(images/textareabk.png);
+    background-position: center;
+    background-size: 750px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border:1px solid #AAA;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    border-top-color: #2e2d2d;
+    box-shadow: 0px 0px 10px gray;
+    font-size: 25px;
+}
+.headtext{
+    padding-top:80px;
+    text-align: center;
+    cursor: default;
+}
+.chk,
+.post {
+    position: absolute;
+    margin-top: 410px;
+}
+.chk{
+    margin-right: -280px;
+}
+.post{
+    margin-right: -580px;
+}
+.chk button{
+    width: 140px;
+    height: 42px;
+    border-radius: 20px;
+    padding: 5px 10px;
+    border: 0px solid #838383;
+    background: #2F5D8C;
+    color: #FFF;
+    cursor: pointer;
+    /* position: absolute; */
+    margin: 10px;
+    font-size: 20px;
+    box-shadow: 4px 4px 17px 0px rgba(0, 0, 0, 0.25);
+}
+.post button{
+    /* position: absolute; */
+    width: 140px;
+    height: 42px;
+    border-radius: 20px;
+    padding: 5px 10px;
+    border: 3px solid #2F5D8C;
+    background: #FFF;
+    box-shadow: 4px 4px 17px 0px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+/* posted page */
+.posted{
+    width: 100%;
+    height: 70vh;
+    background: #FFF;
+}
+.search-bar{
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+.search-bar input{
+    background: #fff;
+    border-radius: 30px 0 0 30px;
+    padding-left: 30px;
+    border: 2px solid #2F5D8C;
+    width: 700px;
+    height: 59px;
+    font-size: 24px;
+    z-index: 2;
+}
+.search-bar button{
+    border-radius: 0px 30px 30px 0px;
+    background: #2F5D8C;   
+    height: 59px;
+    width: 100px;
+    z-index: 5;
+    cursor: pointer;
+}
+/*ดูกลอนทั้งหมด*/
+
+.listshow {
+    width: 1200px;
+    height: 330px;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-top: 70px;
+    margin-left: -20px;
+    padding-left: 30px;
+}
+
+.listshow ul {
+    list-style: none;
+    cursor: default;
+}
+
+.listshow ul li {
+    display: inline-block;
+    vertical-align: top;
+    width: 265px;
+    height: 285px;
+    background: #FFF;
+    border-radius: 10px;
+    font-size: 17px;
+    padding: 20px 20px;
+    margin-right: 20px;
+    border: 4px solid #2F5D8C;
+    box-shadow: 0px -2px 23px -6px rgba(0, 0, 0, 0.25);
+}
+.postedlist{
+    white-space: normal;
+    display: contents;
+}
+.writer {
+    width: 220px;
+    height: 58px;
+    margin-top: 45px;
+    padding: 17px 50px;
+    border-radius: 10px;
+    background: var(--tc, #A0B3C1);
+}
+.watchall{
+    position: absolute;
+    margin-top: -240px;
+    right: 25rem;
+    z-index: 15;
+}
+.watchall a:hover .watch{
+    border-radius: 100px;
+    background: #e8f5ff;
+    cursor: pointer;
+}
+.watchall p{
+    margin-top: 20px;
+    padding-left: 10px;
+    font-size: 20px;
+    color: #000;
+    cursor: default;
+}
+/* popupกลอนทั้งหมด */
+.dropdown{
+    margin-top: 25px;
+    margin-left: 60px;
+}
+.dropdown select {
+    width: 134px;
+    height: 42px;
+    border-radius: 58px;
+    z-index: 5;
+    border:none;
+    appearance: none;
+    background-color: #F5C265;
+    color: black;
+    font-size: 20px;
+    padding: 9px 20px;
+    cursor: pointer;
+}
+.dropdown .icon-container{
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 100px;
+    z-index: 7;
+    /* right: 0; */
+    /* display: flex; */
+    align-items: center;
+    /* justify-content: center; */
+}
+.icon-container{
+    display: none;
+}
+.dropdown select option:hover {
+    background: gray;
+}
+.allposted{
+    position: absolute;
+    z-index:60;
+    width: 900px;
+    height: 80vh;
+    margin-top: 40px;
+    margin-left: 400px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 5px 5px 19px 0px rgba(0, 0, 0, 0.25);
+    overflow: auto;
+    cursor: default;
+}
+.allposted button.close2{
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    top: 16px;
+    right: 17px;
+    background: none;
+    border: 0px;
+    cursor: pointer;
+}
+.allposted h1{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: normal;
+}
+.search-bar2{
+    padding-top: 30px;
+    padding-left: 90px;
+}
+.search-bar2 input{
+    background: #fff;
+    border-radius: 30px;
+    padding-left: 30px;
+    border: 2px solid #2F5D8C;
+    width: 750px;
+    height: 59px;
+    font-size: 24px;
+    z-index: 2;
+}
+.search-bar2 button{
+    position: absolute;
+    border-radius: 0px 30px 30px 0px;
+    background: #2F5D8C;   
+    height: 59px;
+    width: 100px;
+    margin-left: -101px;
+    z-index: 5;
+    cursor: pointer;
+}
+.allposted ul{
+    margin-top: 30px;
+    list-style: none;
+}
+.allposted li{
+    background: #fff;
+    position: relative;
+    width: 700px;
+    
+    border-radius: 10px;
+    border: 4px solid #2F5D8C;
+    box-shadow: 0px -2px 23px -6px rgba(0, 0, 0, 0.25);
+    padding:20px 30px;
+    margin: 40px 100px;
+}
+.postedtext{
+    width: 390px;
+}
+.postedtext p{
+    font-size: 20px;
+}
+.writeby{
+    margin-top: 20px;
+}
+/* หน้าLearn */
+.learn{
+    width: 100%;
+    height: 120vh;
+    position: static;
+    background-color: #3C444C;
+    background-position: center;
+    background-size: cover;
+    cursor: default;
+}
+.mkm{
+    width: 50%;
+    margin: 0 auto;
+}
+.k4head{
+    padding-top: 100px;
+    color: #FFF;
+    font-size: 50px;
+    text-align: center;
+}
+.panpung{
+    font-size: 30px;
+    margin-top: 30px;
+    background-color: #F5C265;
+    border-radius: 40px;
+    padding: 5px 53px;
+    border: 0px solid #838383;
+    width: 170px;
+    height: 40px;
+    cursor: default;
+}
+.k4pic{
+    height: 300px;
+    width: 700px;
+}
+
+.tuayang{
+    font-size: 30px;
+    z-index: 6;
+    margin-top: 345px;
+    padding: 5px 42px;
+    position: absolute;
+    height: 40px;
+    border-radius: 40px;
+    background: #CD5242;
+    color: #fff;
+}
+.im{
+    height: 300px;
+    width: 700px;
+    min-width: 500px;
+    position: absolute;
+}
+/* .bk{
+    width: 100%;
+    height: 450px;
+    margin-top: -250px;
+    position: static;
+    background-color: rgb(113, 132, 137);
+} */
+.end{
+    width: 100%;
+    height: 35vh;
+    position: static;
+    margin-top: -540px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+.credit{
+    width: 100%;
+    height: 350px;
+    position: inherit;
+    margin-top: 540px;
+    background: #fff;
+    background-position: center;
+    background-size:cover;
+}
+.credit {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+  
+.credit ul {
+    list-style: none;
+    padding: 0;
+}
+.main{
+    display: flex;
+    justify-content: space-around;
+}
+.credit{
+    display: flex;
+    flex-direction: row;
+    /* gap: 20px; */
+}
+.credit .submain {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+}
+.credit h1{
+    margin-left: 200px;
+    margin-top: 50px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: default;
+}
+.tuayang{
+    display: none;
+}
+.credit .sub {
+    margin-top: 30px;
+    margin-left: 200px;
+    padding-left: 0;
+}
+.credit .sub li {
+    margin-top: 10px;
+    cursor: default;
+}
+/* .mk_poem{
+} */
+#show_poem{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 850px;
+    margin: 40px auto;
+    margin-bottom: 0px;
+    column-gap: 90px;
+}
+.watchall{
+    right: 15rem;
+}
+.listshow{
+    width: 80%;
+}
+.search-bar{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+@media screen and (max-width: 1200px) {
+    .learn{
+        height: 800px;
+    }
+    .posted{
+        height: 600px;
+    }
+    .check{
+        height: 800px;
+    }
+    .posted{
+        margin-bottom: 100px;
+    }
+    .ipad-del{
+        display: none;
+    }
+    #ipad-del-nav1{
+        padding: 0px;
+    }
+
+    .info{
+        padding-left: 60px;
+        padding-right: 60px;
+        height: 900px;
+    }
+    .info h1{
+        font-size: 40px;
+    }
+    .info h2{
+        font-size: 20px;
+    }
+    .list1 li p{
+        font-size: 18px;
+    }
+    .list1 li svg{
+        width: 70px;
+    }
+    .list2 li p{
+        font-size: 18px;
+    }
+    .list2 li svg{
+        width: 90px;
+    }
+    .input{
+        width: auto;
+    }
+    textarea{
+        font-size: 20px;
+    }
+    .watchall{
+        right: 20px;
+    }
+    .listshow{
+        width: 80%;
+    }
+    .search-bar{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .allposted{
+        margin-left: 20%;
+        width: 70%;
+    }
+    .listiny ul li{
+        width: 90%;
+        margin-left: 5%;
+    }
+    .postedtext p{
+        width: 80%;
+    }
+    .his-page{
+        width: 680px;
+    }
+    .k4pic{
+        width: 600px;
+        height: 200px;
+    }
+    .im{
+        width: 600px;
+        height: 200px;
+    }
+    .k4head{
+        font-size: 40px;
+    }
+    .submain h1{
+        margin-left: 150px;
+    }
+    .submain .sub{
+        margin-left: 150px;
+    }
+    .Home{
+        height: 800px;
+    }
+}
+@media screen and (max-width: 900px) {
+
+    #ipad-del-nav1{
+        justify-content: space-between;
+    }
+    .mb-del{
+        display: none;
+    }
+    #mb-del-nav1{
+        padding: 0px;
+    }
+    #register{
+        width: 450px;
+    }
+    #login{
+        width: 450px;
+    }
+    .info{
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-bottom: 50%;
+    }
+    .list1,.list2{
+        flex-direction: column;
+        margin-top: 0;
+        margin-bottom: 0;
+        align-items: center;
+    }
+    .list2 li p,.list1 li p{
+        margin: 30px 0;
+        margin-left: 50px;
+    }
+    .input{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .check{
+        display: block;
+    }
+    .chk{
+        margin-right: 0px;
+    }
+    .post{
+        margin-right: -270px;
+    }
+    .chk button,.post button{
+        width:100px;
+    }
+    textarea{
+        font-size: 17px;
+    }
+    .watchall{
+        right: 20px;
+    }
+    .listshow{
+        width: 95%;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    .search-bar{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .postedlist{
+        font-size: 14px;
+    }
+    .postedtext p{
+        width: 70%;
+        font-size: 18px;
+    }
+    .posted h1{
+        font-size: 29px;
+    }
+    .his-page{
+        width: 480px;
+        margin-left: -50%;
+        position: fixed;
+    }
+    #his_poem li{
+        width: 370px;
+
+    }
+    .k4head{
+        font-size: 35px;
+    }
+    .submain h1{
+        margin-left: 40px;
+    }
+    .submain .sub{
+        margin-left: 40px;
+    }
+    .learn{
+        display: none;
+    }
+}
